@@ -1,0 +1,1 @@
+javadoc -public -splitindex -subpackages com.xively -exclude com.xively.internal:com.xively.chat.internal:com.xively.connection.internal:com.xively.device.internal:com.xively.iot.impl:com.xively.auth.impl -sourcepath XivelySDKAndroid/src/main/java -d javadoc

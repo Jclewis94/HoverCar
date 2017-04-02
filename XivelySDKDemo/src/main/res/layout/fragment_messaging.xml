@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MessagingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Message_messages_scroll"
+        android:fillViewport="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/radioButton2">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Message_tvMessages"
+            android:layout_gravity="bottom"
+            android:text=""
+            />
+
+    </ScrollView>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Message_editTextMessage"
+        android:layout_toLeftOf="@+id/Message_buttonSend"
+        android:layout_toStartOf="@+id/Message_buttonSend"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:hint="Type your message here..." />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/Message_buttonSend"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QoS 0"
+        android:id="@+id/messaging_qos0"
+        android:checked="true"
+        android:textColor="@color/colorAccent"
+        android:layout_above="@+id/Message_editTextMessage"
+        android:layout_alignLeft="@+id/Message_editTextMessage"
+        android:layout_alignStart="@+id/Message_editTextMessage" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QoS 1"
+        android:id="@+id/messaging_qos1"
+        android:checked="false"
+        android:textColor="@color/colorAccent"
+        android:layout_above="@+id/Message_editTextMessage"
+        android:layout_toRightOf="@+id/messaging_qos0"
+        android:layout_toEndOf="@+id/messaging_qos0"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retain"
+        android:id="@+id/messaging_retain"
+        android:checked="false"
+        android:textColor="@color/colorAccent"
+        android:layout_above="@+id/Message_editTextMessage"
+        android:layout_toRightOf="@+id/messaging_qos1"
+        android:layout_toEndOf="@+id/messaging_qos1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp" />
+
+</RelativeLayout>
